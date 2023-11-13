@@ -1,9 +1,0 @@
-#-Comment Funktion. die Raute wird von suchmachinen nicht gelesen
-
-User-agent: *
-
-Disallow: /agb.html
-Disallow: /impressum.html
-Disallow: /datenschutz.html
-Disallow: /widerruf.html
-
