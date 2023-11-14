@@ -1,1 +1,12 @@
-/*# sourceMappingURL=styles.css.map */
+.body-replacement {
+  background-color: #007aff;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0 0 0 0;
+}
+
+#navbar-title {
+  z-index: 1;
+}/*# sourceMappingURL=styles.css.map */
