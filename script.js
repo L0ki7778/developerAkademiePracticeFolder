@@ -37,7 +37,8 @@ function showQuestion(number) {
     question.innerHTML =/*html*/`
         ${firstQuestion}
     `;
-    answers()
+    answers();
+    init()
 }
 
 function answers() {
@@ -59,4 +60,17 @@ function nextQuestion() {
 function init(){
     let number = document.getElementById('question-number');
     let length = document.getElementById('question-length');
+
+    number.innerHTML=`${currentQuestion+1}`
+    length.innerHTML=`${cssQuestion.length}&nbsp`
+}
+
+function choice(id){
+    let choice = document.getElementById(`${id}`);
+    let number = currentQuestion;
+    if(choice.innerText == cssQuestion[number].richtige_antwort){
+        choice.style.backgroundColor="green"
+    }else{
+        choice.style.backgroundColor="red"
+    }
 }

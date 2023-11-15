@@ -38,4 +38,9 @@
 
 .card {
   margin-top: 6px;
+}
+
+.option:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
 }/*# sourceMappingURL=styles.css.map */

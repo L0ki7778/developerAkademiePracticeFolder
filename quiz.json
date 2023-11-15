@@ -5,9 +5,9 @@
             {
                 "frage": "Was bedeutet die Abkürzung CSS?",
                 "antworten": [
+                    "Cascading Style Sheets",
                     "Computer Style Sheets",
                     "Creative Style Sheets",
-                    "Cascading Style Sheets",
                     "Colorful Style Sheets"
                 ],
                 "richtige_antwort": "Cascading Style Sheets"
@@ -17,8 +17,8 @@
                 "antworten": [
                     "#p {}",
                     ".p {}",
-                    "p {}",
-                    "*p {}"
+                    "*p {}",
+                    "p {}"
                 ],
                 "richtige_antwort": "p {}"
             },
@@ -26,8 +26,8 @@
                 "frage": "Welche Eigenschaft setzt die Hintergrundfarbe in CSS?",
                 "antworten": [
                     "color",
-                    "background-color",
                     "bgcolor",
+                    "background-color",
                     "style"
                 ],
                 "richtige_antwort": "background-color"
@@ -36,8 +36,8 @@
                 "frage": "Was bedeutet das Box-Modell in CSS?",
                 "antworten": [
                     "Ein Modell für das Platzieren von Boxen auf der Webseite",
-                    "Ein Modell für das Styling von Textboxen",
                     "Ein Modell für die Gestaltung von 3D-Objekten",
+                    "Ein Modell für das Styling von Textboxen",
                     "Ein Modell für die Positionierung von Bildern"
                 ],
                 "richtige_antwort": "Ein Modell für das Platzieren von Boxen auf der Webseite"
@@ -75,7 +75,7 @@
             {
                 "frage": "Wie setzt man einen externen CSS-Link in HTML ein?",
                 "antworten": [
-                    "&lt link rel='stylesheet' type='text/css' href='styles.css'&gt",
+                    "&ltlink rel='stylesheet' type='text/css' href='styles.css'&gt",
                     "&lt style src='styles.css'&gt",
                     "&lt css href='styles.css'&gt",
                     "&lt stylesheet&gtstyles.css&lt/stylesheet&gt"
