@@ -2,60 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizApp</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style/styles.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizApp</title>
+  <script src="script.js" defer></script>
+  <script src="render.js"></script>
+  <link rel="stylesheet" href="style/styles.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body >
-    <nav id="navbar-title" class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">&nbsp QuizApp</span>
-      </nav>
-      <div class="body-replacement">
-          
-        <div class="card-container">
-            <div id ="card-container"class="card" style="width: 18rem;">
-                <img class="card-img-top" src="style/img/maze-1560761_640.png" alt="Card image cap">
-                <div class="card-body">
-                  <div class="card-head" id="question">Frage</div>
-                    <div class="card">
-                        <div class="card-body option" id="answer1" onclick="choice('answer1')">
-                          This is some text within a card body.
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-body option" id="answer2" onclick="choice('answer2')">
-                          This is some text within a card body.
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-body option" id="answer3" onclick="choice('answer3')">
-                          This is some text within a card body.
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-body option" id="answer4" onclick="choice('answer4')">
-                          This is some text within a card body.
-                        </div>
-                      </div>
-                </div>
-                <div class="card-footer">
-                  <div class="question-line">
-                    <div id="question-number"></div>
-                    &nbsp von &nbsp
-                    <div id="question-length"></div>
-                    Fragen
-                    
-                  </div>
-                  <button class="btn btn-primary" id="next" disabled onclick="nextQuestion()">nächste Frage</button>
-                </div>
-              </div>
-        </div>
-      </div>
-
+<body onload="renderQuestions()">
+  <nav id="navbar-title" class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">&nbsp QuizApp</span>
+  </nav>
+  <div id="body-replacement">
+  </div>
 </body>
 
 </html>
