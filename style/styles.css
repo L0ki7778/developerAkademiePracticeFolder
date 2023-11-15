@@ -9,4 +9,33 @@
 
 #navbar-title {
   z-index: 1;
+}
+
+#card-container {
+  width: 100% !important;
+}
+
+.card-container {
+  width: 35% !important;
+}
+
+.card-img-top {
+  max-height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: white !important;
+}
+
+.question-line {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  margin-top: 6px;
 }/*# sourceMappingURL=styles.css.map */
