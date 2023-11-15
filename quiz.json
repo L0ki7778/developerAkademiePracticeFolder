@@ -1,305 +1,422 @@
-{
-    "fragen": [
-      {
+[
+    {
         "thema": "css",
         "fragen": [
-          {
-            "frage": "Was bedeutet die Abkürzung CSS?",
-            "antworten": [
-              "Computer Style Sheets",
-              "Creative Style Sheets",
-              "Cascading Style Sheets",
-              "Colorful Style Sheets"
-            ],
-            "richtige_antwort": "Cascading Style Sheets"
-          },
-          {
-            "frage": "Wie wählt man alle <p> Elemente in CSS aus?",
-            "antworten": ["#p {}", ".p {}", "p {}", "*p {}"],
-            "richtige_antwort": "p {}"
-          },
-          {
-            "frage": "Welche Eigenschaft setzt die Hintergrundfarbe in CSS?",
-            "antworten": ["color", "background-color", "bgcolor", "style"],
-            "richtige_antwort": "background-color"
-          },
-          {
-            "frage": "Was bedeutet das Box-Modell in CSS?",
-            "antworten": [
-              "Ein Modell für das Platzieren von Boxen auf der Webseite",
-              "Ein Modell für das Styling von Textboxen",
-              "Ein Modell für die Gestaltung von 3D-Objekten",
-              "Ein Modell für die Positionierung von Bildern"
-            ],
-            "richtige_antwort": "Ein Modell für das Platzieren von Boxen auf der Webseite"
-          },
-          {
-            "frage": "Welche Einheit wird in CSS für Schriftgröße verwendet?",
-            "antworten": ["px", "em", "pt", "pc"],
-            "richtige_antwort": "px"
-          },
-          {
-            "frage": "Wie zentriert man ein Element horizontal in CSS?",
-            "antworten": [
-              "text-align: center;",
-              "margin: auto;",
-              "padding: center;",
-              "align: center;"
-            ],
-            "richtige_antwort": "margin: auto;"
-          },
-          {
-            "frage": "Was ist der Zweck von z-Index in CSS?",
-            "antworten": [
-              "Die Transparenz eines Elements festlegen",
-              "Die Hintergrundfarbe ändern",
-              "Die Hierarchie von gestapelten Elementen steuern",
-              "Die Schriftart festlegen"
-            ],
-            "richtige_antwort": "Die Hierarchie von gestapelten Elementen steuern"
-          },
-          {
-            "frage": "Wie setzt man einen externen CSS-Link in HTML ein?",
-            "antworten": [
-              "<link rel='stylesheet' type='text/css' href='styles.css'>",
-              "<style src='styles.css'>",
-              "<css href='styles.css'>",
-              "<stylesheet>styles.css</stylesheet>"
-            ],
-            "richtige_antwort": "<link rel='stylesheet' type='text/css' href='styles.css'>"
-          },
-          {
-            "frage": "Welche Farbdefinition repräsentiert die Farbe Rot in CSS?",
-            "antworten": ["#00ff00", "#ff0000", "#0000ff", "#ffffff"],
-            "richtige_antwort": "#ff0000"
-          },
-          {
-            "frage": "Was bewirkt die CSS-Eigenschaft 'display: none;'?",
-            "antworten": [
-              "Das Element wird unsichtbar, nimmt jedoch Platz ein.",
-              "Das Element wird entfernt und der Platz wird freigegeben.",
-              "Das Element wird grau dargestellt.",
-              "Das Element wird in Fettschrift angezeigt."
-            ],
-            "richtige_antwort": "Das Element wird entfernt und der Platz wird freigegeben."
-          }
+            {
+                "frage": "Was bedeutet die Abkürzung CSS?",
+                "antworten": [
+                    "Computer Style Sheets",
+                    "Creative Style Sheets",
+                    "Cascading Style Sheets",
+                    "Colorful Style Sheets"
+                ],
+                "richtige_antwort": "Cascading Style Sheets"
+            },
+            {
+                "frage": "Wie wählt man alle <p> Elemente in CSS aus?",
+                "antworten": [
+                    "#p {}",
+                    ".p {}",
+                    "p {}",
+                    "*p {}"
+                ],
+                "richtige_antwort": "p {}"
+            },
+            {
+                "frage": "Welche Eigenschaft setzt die Hintergrundfarbe in CSS?",
+                "antworten": [
+                    "color",
+                    "background-color",
+                    "bgcolor",
+                    "style"
+                ],
+                "richtige_antwort": "background-color"
+            },
+            {
+                "frage": "Was bedeutet das Box-Modell in CSS?",
+                "antworten": [
+                    "Ein Modell für das Platzieren von Boxen auf der Webseite",
+                    "Ein Modell für das Styling von Textboxen",
+                    "Ein Modell für die Gestaltung von 3D-Objekten",
+                    "Ein Modell für die Positionierung von Bildern"
+                ],
+                "richtige_antwort": "Ein Modell für das Platzieren von Boxen auf der Webseite"
+            },
+            {
+                "frage": "Welche Einheit wird in CSS für Schriftgröße verwendet?",
+                "antworten": [
+                    "px",
+                    "em",
+                    "pt",
+                    "pc"
+                ],
+                "richtige_antwort": "px"
+            },
+            {
+                "frage": "Wie zentriert man ein Element horizontal in CSS?",
+                "antworten": [
+                    "text-align: center;",
+                    "margin: auto;",
+                    "padding: center;",
+                    "align: center;"
+                ],
+                "richtige_antwort": "margin: auto;"
+            },
+            {
+                "frage": "Was ist der Zweck von z-Index in CSS?",
+                "antworten": [
+                    "Die Transparenz eines Elements festlegen",
+                    "Die Hintergrundfarbe ändern",
+                    "Die Hierarchie von gestapelten Elementen steuern",
+                    "Die Schriftart festlegen"
+                ],
+                "richtige_antwort": "Die Hierarchie von gestapelten Elementen steuern"
+            },
+            {
+                "frage": "Wie setzt man einen externen CSS-Link in HTML ein?",
+                "antworten": [
+                    "&lt link rel='stylesheet' type='text/css' href='styles.css'&gt",
+                    "&lt style src='styles.css'&gt",
+                    "&lt css href='styles.css'&gt",
+                    "&lt stylesheet&gtstyles.css&lt/stylesheet&gt"
+                ],
+                "richtige_antwort": "<link rel='stylesheet' type='text/css' href='styles.css'>"
+            },
+            {
+                "frage": "Welche Farbdefinition repräsentiert die Farbe Rot in CSS?",
+                "antworten": [
+                    "#00ff00",
+                    "#ff0000",
+                    "#0000ff",
+                    "#ffffff"
+                ],
+                "richtige_antwort": "#ff0000"
+            },
+            {
+                "frage": "Was bewirkt die CSS-Eigenschaft 'display: none;'?",
+                "antworten": [
+                    "Das Element wird unsichtbar, nimmt jedoch Platz ein.",
+                    "Das Element wird entfernt und der Platz wird freigegeben.",
+                    "Das Element wird grau dargestellt.",
+                    "Das Element wird in Fettschrift angezeigt."
+                ],
+                "richtige_antwort": "Das Element wird entfernt und der Platz wird freigegeben."
+            }
         ]
-      },
-      {
+    },
+    {
         "thema": "html",
         "fragen": [
-          {
-            "frage": "Was bedeutet die Abkürzung HTML?",
-            "antworten": [
-              "HyperText Markup Language",
-              "HyperText Modeling Language",
-              "High-Level Text Modeling Language",
-              "Hyperlink and Text Markup Language"
-            ],
-            "richtige_antwort": "HyperText Markup Language"
-          },
-          {
-            "frage": "Was ist die richtige Reihenfolge der HTML-Elemente für ein grundlegendes HTML-Dokument?",
-            "antworten": [
-              "<html>, <head>, <body>, <title>",
-              "<head>, <title>, <html>, <body>",
-              "<html>, <title>, <head>, <body>",
-              "<title>, <head>, <body>, <html>"
-            ],
-            "richtige_antwort": "<html>, <head>, <body>, <title>"
-          },
-          {
-            "frage": "Wie fügt man einen Zeilenumbruch in HTML ein?",
-            "antworten": ["<br>", "<lb>", "<break>", "<newline>"],
-            "richtige_antwort": "<br>"
-          },
-          {
-            "frage": "Welches HTML-Element wird verwendet, um einen Hyperlink zu erstellen?",
-            "antworten": ["<link>", "<a>", "<href>", "<hyperlink>"],
-            "richtige_antwort": "<a>"
-          },
-          {
-            "frage": "Wie wird ein Kommentar in HTML geschrieben?",
-            "antworten": ["<!-- Dies ist ein Kommentar -->", "// Dies ist ein Kommentar", "# Dies ist ein Kommentar", "/ Dies ist ein Kommentar /"],
-            "richtige_antwort": "<!-- Dies ist ein Kommentar -->"
-          },
-          {
-            "frage": "Was ist die Funktion des HTML-Elements <meta charset='UTF-8'>?",
-            "antworten": [
-              "Es legt die Schriftgröße fest.",
-              "Es legt die Zeichenkodierung für die Seite fest.",
-              "Es erstellt einen Abschnitt mit Metadaten.",
-              "Es fügt einen Hyperlink zu einer anderen Seite hinzu."
-            ],
-            "richtige_antwort": "Es legt die Zeichenkodierung für die Seite fest."
-          },
-          {
-            "frage": "Wie wird ein numerisch geordnete Liste in HTML erstellt?",
-            "antworten": ["<ol>", "<ul>", "<li>", "<dl>"],
-            "richtige_antwort": "<ol>"
-          },
-          {
-            "frage": "Was ist die Bedeutung des HTML-Elements <em>?",
-            "antworten": [
-              "Es erstellt eine Tabelle.",
-              "Es betont den Text kursiv.",
-              "Es fügt einen Zeilenumbruch hinzu.",
-              "Es erstellt eine Liste."
-            ],
-            "richtige_antwort": "Es betont den Text kursiv."
-          },
-          {
-            "frage": "Wie fügt man ein Bild in HTML ein?",
-            "antworten": ["<img src='bild.jpg'>", "<image href='bild.jpg'>", "<img alt='bild.jpg'>", "<picture>bild.jpg</picture>"],
-            "richtige_antwort": "<img src='bild.jpg'>"
-          },
-          {
-            "frage": "Welches HTML-Element wird für die Definition von Navigation verwendet?",
-            "antworten": ["<nav>", "<navigate>", "<navigation>", "<navig>"],
-            "richtige_antwort": "<nav>"
-          }
+            {
+                "frage": "Was bedeutet die Abkürzung HTML?",
+                "antworten": [
+                    "HyperText Markup Language",
+                    "HyperText Modeling Language",
+                    "High-Level Text Modeling Language",
+                    "Hyperlink and Text Markup Language"
+                ],
+                "richtige_antwort": "HyperText Markup Language"
+            },
+            {
+                "frage": "Was ist die richtige Reihenfolge der HTML-Elemente für ein grundlegendes HTML-Dokument?",
+                "antworten": [
+                    "<html>, <head>, <body>, <title>",
+                    "<head>, <title>, <html>, <body>",
+                    "<html>, <title>, <head>, <body>",
+                    "<title>, <head>, <body>, <html>"
+                ],
+                "richtige_antwort": "<html>, <head>, <body>, <title>"
+            },
+            {
+                "frage": "Wie fügt man einen Zeilenumbruch in HTML ein?",
+                "antworten": [
+                    "<br>",
+                    "<lb>",
+                    "<break>",
+                    "<newline>"
+                ],
+                "richtige_antwort": "<br>"
+            },
+            {
+                "frage": "Welches HTML-Element wird verwendet, um einen Hyperlink zu erstellen?",
+                "antworten": [
+                    "<link>",
+                    "<a>",
+                    "<href>",
+                    "<hyperlink>"
+                ],
+                "richtige_antwort": "<a>"
+            },
+            {
+                "frage": "Wie wird ein Kommentar in HTML geschrieben?",
+                "antworten": [
+                    "<!-- Dies ist ein Kommentar -->",
+                    "// Dies ist ein Kommentar",
+                    "# Dies ist ein Kommentar",
+                    "/ Dies ist ein Kommentar /"
+                ],
+                "richtige_antwort": "<!-- Dies ist ein Kommentar -->"
+            },
+            {
+                "frage": "Was ist die Funktion des HTML-Elements <meta charset='UTF-8'>?",
+                "antworten": [
+                    "Es legt die Schriftgröße fest.",
+                    "Es legt die Zeichenkodierung für die Seite fest.",
+                    "Es erstellt einen Abschnitt mit Metadaten.",
+                    "Es fügt einen Hyperlink zu einer anderen Seite hinzu."
+                ],
+                "richtige_antwort": "Es legt die Zeichenkodierung für die Seite fest."
+            },
+            {
+                "frage": "Wie wird ein numerisch geordnete Liste in HTML erstellt?",
+                "antworten": [
+                    "<ol>",
+                    "<ul>",
+                    "<li>",
+                    "<dl>"
+                ],
+                "richtige_antwort": "<ol>"
+            },
+            {
+                "frage": "Was ist die Bedeutung des HTML-Elements <em>?",
+                "antworten": [
+                    "Es erstellt eine Tabelle.",
+                    "Es betont den Text kursiv.",
+                    "Es fügt einen Zeilenumbruch hinzu.",
+                    "Es erstellt eine Liste."
+                ],
+                "richtige_antwort": "Es betont den Text kursiv."
+            },
+            {
+                "frage": "Wie fügt man ein Bild in HTML ein?",
+                "antworten": [
+                    "<img src='bild.jpg'>",
+                    "<image href='bild.jpg'>",
+                    "<img alt='bild.jpg'>",
+                    "<picture>bild.jpg</picture>"
+                ],
+                "richtige_antwort": "<img src='bild.jpg'>"
+            },
+            {
+                "frage": "Welches HTML-Element wird für die Definition von Navigation verwendet?",
+                "antworten": [
+                    "<nav>",
+                    "<navigate>",
+                    "<navigation>",
+                    "<navig>"
+                ],
+                "richtige_antwort": "<nav>"
+            }
         ]
-      },
-      {
+    },
+    {
         "thema": "js",
         "fragen": [
-          {
-            "frage": "Was ist JavaScript?",
-            "antworten": [
-              "Eine Programmiersprache",
-              "Ein Textbearbeitungswerkzeug",
-              "Ein Grafikdesign-Programm",
-              "Ein Betriebssystem"
-            ],
-            "richtige_antwort": "Eine Programmiersprache"
-          },
-          {
-            "frage": "Wie deklariert man eine Variable in JavaScript?",
-            "antworten": ["variable x", "var x", "x = 5", "set x to 5"],
-            "richtige_antwort": "var x"
-          },
-          {
-            "frage": "Was bewirkt die Funktion document.getElementById('demo') in JavaScript?",
-            "antworten": [
-              "Es ändert den Stil des Elements mit der ID 'demo'.",
-              "Es ruft den Wert des Elements mit der ID 'demo' ab.",
-              "Es löscht das Element mit der ID 'demo'.",
-              "Es fügt ein neues Element mit der ID 'demo' hinzu."
-            ],
-            "richtige_antwort": "Es ruft den Wert des Elements mit der ID 'demo' ab."
-          },
-          {
-            "frage": "Wie wird eine Funktion in JavaScript definiert?",
-            "antworten": ["function myFunction()", "def myFunction()", "void myFunction()", "call myFunction()"],
-            "richtige_antwort": "function myFunction()"
-          },
-          {
-            "frage": "Was ist die Ausgabe von `console.log(5 + '5')` in JavaScript?",
-            "antworten": ["10", "55", "undefined", "Error"],
-            "richtige_antwort": "55"
-          },
-          {
-            "frage": "Wie überprüft man, ob eine Variable in JavaScript null oder undefined ist?",
-            "antworten": [
-              "if (x === null || x === undefined)",
-              "if (x == null)",
-              "if (x === null)",
-              "if (x == undefined)"
-            ],
-            "richtige_antwort": "if (x == null)"
-          },
-          {
-            "frage": "Was ist der DOM in Bezug auf JavaScript?",
-            "antworten": [
-              "Data Object Model",
-              "Document Object Model",
-              "Dynamic Object Model",
-              "Design Object Model"
-            ],
-            "richtige_antwort": "Document Object Model"
-          },
-          {
-            "frage": "Wie kann man eine Schleife in JavaScript vorzeitig beenden?",
-            "antworten": [
-              "break;",
-              "exit;",
-              "stop;",
-              "end loop;"
-            ],
-            "richtige_antwort": "break;"
-          },
-          {
-            "frage": "Welche Methode wird verwendet, um einen zufälligen Index aus einem Array in JavaScript zu erhalten?",
-            "antworten": ["randomIndex()", "getRandomIndex()", "Math.random()", "random()"],
-            "richtige_antwort": "Math.random()"
-          },
-          {
-            "frage": "Was ist der Zweck der `addEventListener`-Methode in JavaScript?",
-            "antworten": [
-              "Um eine Funktion zu einer HTML-Datei hinzuzufügen.",
-              "Um auf Benutzerinteraktionen zu reagieren.",
-              "Um Elemente aus dem DOM zu entfernen.",
-              "Um ein Bild zu einem HTML-Element hinzuzufügen."
-            ],
-            "richtige_antwort": "Um auf Benutzerinteraktionen zu reagieren."
-          }
+            {
+                "frage": "Was ist JavaScript?",
+                "antworten": [
+                    "Eine Programmiersprache",
+                    "Ein Textbearbeitungswerkzeug",
+                    "Ein Grafikdesign-Programm",
+                    "Ein Betriebssystem"
+                ],
+                "richtige_antwort": "Eine Programmiersprache"
+            },
+            {
+                "frage": "Wie deklariert man eine Variable in JavaScript?",
+                "antworten": [
+                    "variable x",
+                    "var x",
+                    "x = 5",
+                    "set x to 5"
+                ],
+                "richtige_antwort": "var x"
+            },
+            {
+                "frage": "Was bewirkt die Funktion document.getElementById('demo') in JavaScript?",
+                "antworten": [
+                    "Es ändert den Stil des Elements mit der ID 'demo'.",
+                    "Es ruft den Wert des Elements mit der ID 'demo' ab.",
+                    "Es löscht das Element mit der ID 'demo'.",
+                    "Es fügt ein neues Element mit der ID 'demo' hinzu."
+                ],
+                "richtige_antwort": "Es ruft den Wert des Elements mit der ID 'demo' ab."
+            },
+            {
+                "frage": "Wie wird eine Funktion in JavaScript definiert?",
+                "antworten": [
+                    "function myFunction()",
+                    "def myFunction()",
+                    "void myFunction()",
+                    "call myFunction()"
+                ],
+                "richtige_antwort": "function myFunction()"
+            },
+            {
+                "frage": "Was ist die Ausgabe von `console.log(5 + '5')` in JavaScript?",
+                "antworten": [
+                    "10",
+                    "55",
+                    "undefined",
+                    "Error"
+                ],
+                "richtige_antwort": "55"
+            },
+            {
+                "frage": "Wie überprüft man, ob eine Variable in JavaScript null oder undefined ist?",
+                "antworten": [
+                    "if (x === null || x === undefined)",
+                    "if (x == null)",
+                    "if (x === null)",
+                    "if (x == undefined)"
+                ],
+                "richtige_antwort": "if (x == null)"
+            },
+            {
+                "frage": "Was ist der DOM in Bezug auf JavaScript?",
+                "antworten": [
+                    "Data Object Model",
+                    "Document Object Model",
+                    "Dynamic Object Model",
+                    "Design Object Model"
+                ],
+                "richtige_antwort": "Document Object Model"
+            },
+            {
+                "frage": "Wie kann man eine Schleife in JavaScript vorzeitig beenden?",
+                "antworten": [
+                    "break;",
+                    "exit;",
+                    "stop;",
+                    "end loop;"
+                ],
+                "richtige_antwort": "break;"
+            },
+            {
+                "frage": "Welche Methode wird verwendet, um einen zufälligen Index aus einem Array in JavaScript zu erhalten?",
+                "antworten": [
+                    "randomIndex()",
+                    "getRandomIndex()",
+                    "Math.random()",
+                    "random()"
+                ],
+                "richtige_antwort": "Math.random()"
+            },
+            {
+                "frage": "Was ist der Zweck der `addEventListener`-Methode in JavaScript?",
+                "antworten": [
+                    "Um eine Funktion zu einer HTML-Datei hinzuzufügen.",
+                    "Um auf Benutzerinteraktionen zu reagieren.",
+                    "Um Elemente aus dem DOM zu entfernen.",
+                    "Um ein Bild zu einem HTML-Element hinzuzufügen."
+                ],
+                "richtige_antwort": "Um auf Benutzerinteraktionen zu reagieren."
+            }
         ]
-      },
-      {
+    },
+    {
         "thema": "pokemon",
         "fragen": [
-          {
-            "frage": "Wer ist der Protagonist der Pokémon-Serie?",
-            "antworten": ["Pikachu", "Ash Ketchum", "Charizard", "Team Rocket"],
-            "richtige_antwort": "Ash Ketchum"
-          },
-          {
-            "frage": "Welcher Typ ist effektiv gegenüber dem Wasser-Typ?",
-            "antworten": ["Feuer", "Elektro", "Pflanze", "Gestein"],
-            "richtige_antwort": "Pflanze"
-          },
-          {
-            "frage": "Wie viele Pokémon der ersten Generation gibt es insgesamt?",
-            "antworten": ["100", "151", "200", "120"],
-            "richtige_antwort": "151"
-          },
-          {
-            "frage": "Was ist die maximale Anzahl von EP (Erfahrungspunkten), die ein Pokémon haben kann?",
-            "antworten": ["999", "65535", "1000000", "500000"],
-            "richtige_antwort": "1000000"
-          },
-          {
-            "frage": "Welches Pokémon entwickelt sich aus Pikachu?",
-            "antworten": ["Raichu", "Electabuzz", "Jolteon", "Pichu"],
-            "richtige_antwort": "Raichu"
-          },
-          {
-            "frage": "Welcher Typ ist Pikachu?",
-            "antworten": ["Elektro", "Feuer", "Flug", "Normal"],
-            "richtige_antwort": "Elektro"
-          },
-          {
-            "frage": "In welcher Region beginnt die Reise in Pokémon Red/Blue?",
-            "antworten": ["Kanto", "Johto", "Hoenn", "Sinnoh"],
-            "richtige_antwort": "Kanto"
-          },
-          {
-            "frage": "Welcher der folgenden Pokémon ist legendär?",
-            "antworten": ["Snorlax", "Lapras", "Mewtwo", "Gengar"],
-            "richtige_antwort": "Mewtwo"
-          },
-          {
-            "frage": "Was ist der Typ von Mewtu?",
-            "antworten": ["Psycho", "Kampf", "Unlicht", "Geist"],
-            "richtige_antwort": "Psycho"
-          },
-          {
-            "frage": "Welches Pokémon ist bekannt als 'der Zeitreisende'?",
-            "antworten": ["Celebi", "Dialga", "Palkia", "Arceus"],
-            "richtige_antwort": "Celebi"
-          }
+            {
+                "frage": "Wer ist der Protagonist der Pokémon-Serie?",
+                "antworten": [
+                    "Pikachu",
+                    "Ash Ketchum",
+                    "Charizard",
+                    "Team Rocket"
+                ],
+                "richtige_antwort": "Ash Ketchum"
+            },
+            {
+                "frage": "Welcher Typ ist effektiv gegenüber dem Wasser-Typ?",
+                "antworten": [
+                    "Feuer",
+                    "Elektro",
+                    "Pflanze",
+                    "Gestein"
+                ],
+                "richtige_antwort": "Pflanze"
+            },
+            {
+                "frage": "Wie viele Pokémon der ersten Generation gibt es insgesamt?",
+                "antworten": [
+                    "100",
+                    "151",
+                    "200",
+                    "120"
+                ],
+                "richtige_antwort": "151"
+            },
+            {
+                "frage": "Was ist die maximale Anzahl von EP (Erfahrungspunkten), die ein Pokémon haben kann?",
+                "antworten": [
+                    "999",
+                    "65535",
+                    "1000000",
+                    "500000"
+                ],
+                "richtige_antwort": "1000000"
+            },
+            {
+                "frage": "Welches Pokémon entwickelt sich aus Pikachu?",
+                "antworten": [
+                    "Raichu",
+                    "Electabuzz",
+                    "Jolteon",
+                    "Pichu"
+                ],
+                "richtige_antwort": "Raichu"
+            },
+            {
+                "frage": "Welcher Typ ist Pikachu?",
+                "antworten": [
+                    "Elektro",
+                    "Feuer",
+                    "Flug",
+                    "Normal"
+                ],
+                "richtige_antwort": "Elektro"
+            },
+            {
+                "frage": "In welcher Region beginnt die Reise in Pokémon Red/Blue?",
+                "antworten": [
+                    "Kanto",
+                    "Johto",
+                    "Hoenn",
+                    "Sinnoh"
+                ],
+                "richtige_antwort": "Kanto"
+            },
+            {
+                "frage": "Welcher der folgenden Pokémon ist legendär?",
+                "antworten": [
+                    "Snorlax",
+                    "Lapras",
+                    "Mewtwo",
+                    "Gengar"
+                ],
+                "richtige_antwort": "Mewtwo"
+            },
+            {
+                "frage": "Was ist der Typ von Mewtu?",
+                "antworten": [
+                    "Psycho",
+                    "Kampf",
+                    "Unlicht",
+                    "Geist"
+                ],
+                "richtige_antwort": "Psycho"
+            },
+            {
+                "frage": "Welches Pokémon ist bekannt als 'der Zeitreisende'?",
+                "antworten": [
+                    "Celebi",
+                    "Dialga",
+                    "Palkia",
+                    "Arceus"
+                ],
+                "richtige_antwort": "Celebi"
+            }
         ]
-      }
-    ]
-  }
-  
+    }
+]
