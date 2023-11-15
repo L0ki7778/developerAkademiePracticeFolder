@@ -52,9 +52,20 @@ function answers() {
 
 function nextQuestion() {
     currentQuestion +=1;
+    refresh();
     return showQuestion()
 }
 
+function refresh(){
+    let cards = document.getElementsByClassName('option');
+    for(let i = 0; i<cards.length; i++){
+        cards[i].style.pointerEvents="all",
+        cards[i].style.backgroundColor="white",
+        cards[i].addEventListener("mouseenter",mEnter),        
+        cards[i].addEventListener("mouseout",mOut)
+
+    }
+}
 
 
 function init(){
@@ -67,10 +78,24 @@ function init(){
 
 function choice(id){
     let choice = document.getElementById(`${id}`);
+    let cards = document.getElementsByClassName('option');
     let number = currentQuestion;
     if(choice.innerText == cssQuestion[number].richtige_antwort){
         choice.style.backgroundColor="green"
     }else{
         choice.style.backgroundColor="red"
+    };
+    for(let i = 0; i<cards.length; i++){
+        cards[i].style.pointerEvents="none",
+        cards[i].removeEventListener("mouseenter",mEnter),
+        cards[i].removeEventListener("mouseout",mOut)
     }
+}
+
+function mEnter(){
+    this.style.backgroundColor="rgba(0,0,0,0.1)"
+}
+
+function mOut(){
+    this.style.backgroundColor="white"
 }
