@@ -120,37 +120,37 @@
             {
                 "frage": "Was ist die richtige Reihenfolge der HTML-Elemente für ein grundlegendes HTML-Dokument?",
                 "antworten": [
-                    "<html>, <head>, <body>, <title>",
-                    "<head>, <title>, <html>, <body>",
-                    "<html>, <title>, <head>, <body>",
-                    "<title>, <head>, <body>, <html>"
+                    "&lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;title&gt;",
+                    "&lt;head&gt;, &lt;title&gt;, &lt;html&gt;, &lt;body&gt;",
+                    "&lt;html&gt;, &lt;title&gt;, &lt;head&gt;, &lt;body&gt;",
+                    "&lt;title&gt;, &lt;head&gt;, &lt;body&gt;, &lt;html&gt;"
                 ],
                 "richtige_antwort": "<html>, <head>, <body>, <title>"
             },
             {
                 "frage": "Wie fügt man einen Zeilenumbruch in HTML ein?",
                 "antworten": [
-                    "<br>",
-                    "<lb>",
-                    "<break>",
-                    "<newline>"
+                    "&lt;br&gt;",
+                    "&lt;lb&gt;",
+                    "&lt;break&gt;",
+                    "&lt;newline&gt;"
                 ],
                 "richtige_antwort": "<br>"
             },
             {
                 "frage": "Welches HTML-Element wird verwendet, um einen Hyperlink zu erstellen?",
                 "antworten": [
-                    "<link>",
-                    "<a>",
-                    "<href>",
-                    "<hyperlink>"
+                    "&lt;link&gt;",
+                    "&lt;a&gt;",
+                    "&lt;href&gt;",
+                    "&lt;hyperlink&gt;"
                 ],
                 "richtige_antwort": "<a>"
             },
             {
                 "frage": "Wie wird ein Kommentar in HTML geschrieben?",
                 "antworten": [
-                    "<!-- Dies ist ein Kommentar -->",
+                    "&lt;!-- Dies ist ein Kommentar --&gt;",
                     "// Dies ist ein Kommentar",
                     "# Dies ist ein Kommentar",
                     "/ Dies ist ein Kommentar /"
@@ -158,7 +158,7 @@
                 "richtige_antwort": "<!-- Dies ist ein Kommentar -->"
             },
             {
-                "frage": "Was ist die Funktion des HTML-Elements <meta charset='UTF-8'>?",
+                "frage": "Was ist die Funktion des HTML-Elements &lt;meta charset='UTF-8'&gt;?",
                 "antworten": [
                     "Es legt die Schriftgröße fest.",
                     "Es legt die Zeichenkodierung für die Seite fest.",
@@ -168,17 +168,17 @@
                 "richtige_antwort": "Es legt die Zeichenkodierung für die Seite fest."
             },
             {
-                "frage": "Wie wird ein numerisch geordnete Liste in HTML erstellt?",
+                "frage": "Wie wird eine numerisch geordnete Liste in HTML erstellt?",
                 "antworten": [
-                    "<ol>",
-                    "<ul>",
-                    "<li>",
-                    "<dl>"
+                    "&lt;ol&gt;",
+                    "&lt;ul&gt;",
+                    "&lt;li&gt;",
+                    "&lt;dl&gt;"
                 ],
                 "richtige_antwort": "<ol>"
             },
             {
-                "frage": "Was ist die Bedeutung des HTML-Elements <em>?",
+                "frage": "Was ist die Bedeutung des HTML-Elements &lt;em&gt;?",
                 "antworten": [
                     "Es erstellt eine Tabelle.",
                     "Es betont den Text kursiv.",
@@ -190,25 +190,26 @@
             {
                 "frage": "Wie fügt man ein Bild in HTML ein?",
                 "antworten": [
-                    "<img src='bild.jpg'>",
-                    "<image href='bild.jpg'>",
-                    "<img alt='bild.jpg'>",
-                    "<picture>bild.jpg</picture>"
+                    "&lt;img src='bild.jpg'&gt;",
+                    "&lt;image href='bild.jpg'&gt;",
+                    "&lt;img alt='bild.jpg'&gt;",
+                    "&lt;picture&gt;bild.jpg&lt;/picture&gt;"
                 ],
                 "richtige_antwort": "<img src='bild.jpg'>"
             },
             {
                 "frage": "Welches HTML-Element wird für die Definition von Navigation verwendet?",
                 "antworten": [
-                    "<nav>",
-                    "<navigate>",
-                    "<navigation>",
-                    "<navig>"
+                    "&lt;nav&gt;",
+                    "&lt;navigate&gt;",
+                    "&lt;navigation&gt;",
+                    "&lt;navig&gt;"
                 ],
                 "richtige_antwort": "<nav>"
             }
         ]
-    },
+    }
+    ,
     {
         "thema": "js",
         "fragen": [

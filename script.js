@@ -1,4 +1,5 @@
 let questions;
+let questionVar;
 let topicCss;
 let cssQuestion;
 let topicHtml;
@@ -26,7 +27,6 @@ fetch('quiz.json')
         jsQuestion = topicJs.fragen;
         topicPoke = questions[3];
         poliQuestion = topicPoke.fragen;
-        showQuestion()
     })
 let currentQuestion = 0;
 
@@ -35,12 +35,12 @@ let currentQuestion = 0;
 function showQuestion(number) {
     number = currentQuestion;
     let question = document.getElementById('question');
-    let firstQuestion = cssQuestion[number].frage
+    let firstQuestion = questionVar[number].frage
     question.innerHTML =/*html*/`
         <b>${firstQuestion}</b>
     `;
     answers();
-    init()
+    questionNumbers()
 }
 
 
@@ -49,7 +49,7 @@ function answers() {
     number = currentQuestion;
     let answers = document.getElementsByClassName('option');
     for (let i = 0; i < answers.length; i++) {
-        answers[i].innerHTML = `${cssQuestion[number].antworten[i]}`
+        answers[i].innerHTML = `${questionVar[number].antworten[i]}`
     }
 }
 
@@ -58,7 +58,7 @@ function answers() {
 function nextQuestion() {
     currentQuestion += 1;
     refresh();
-    return showQuestion()
+    return showQuestion(number, questionVar)
 }
 
 
@@ -78,11 +78,11 @@ function refresh() {
 }
 
 // actual question and amount of questions
-function init() {
+function questionNumbers() {
     let number = document.getElementById('question-number');
     let length = document.getElementById('question-length');
     number.innerHTML = `<b>${currentQuestion + 1}</b>`
-    length.innerHTML = `<b>${cssQuestion.length}</b>&nbsp`
+    length.innerHTML = `<b>${questionVar.length}</b>&nbsp`
 }
 
 
@@ -90,7 +90,7 @@ function init() {
 function choice(id) {
     let choice = document.getElementById(`${id}`);
     let number = currentQuestion;
-    if (choice.innerText !== cssQuestion[number].richtige_antwort) {
+    if (choice.innerText !== questionVar[number].richtige_antwort) {
         choice.parentNode.classList.add('bg-danger')
     };
     choice.style.color = "white";
@@ -115,7 +115,7 @@ function changeCss() {
         cards[i].parentNode.style.pointerEvents = "none",
             cards[i].parentNode.removeEventListener("mouseenter", mEnter),
             cards[i].parentNode.removeEventListener("mouseout", mOut)
-        if (cards[i].innerText == cssQuestion[number].richtige_antwort) {
+        if (cards[i].innerText == questionVar[number].richtige_antwort) {
             cards[i].parentNode.classList.add('bg-success')
             cards[i].style.color = "white"
         }
@@ -123,8 +123,32 @@ function changeCss() {
     button.disabled = false;
 }
 
-function calcScreen(){
-    wHeight = window.innerHeight;
-    wWidth = window.innerWidth;
-    let navbar = document.getElementById
+
+function generateQuestionCard(topic) {
+    let number = currentQuestion;
+    if (topic === 'jsCard') {
+        questionVar = jsQuestion;
+    } else if (topic === 'cssCard') {
+        questionVar = cssQuestion;
+    } else if (topic === 'htmlCard') {
+        questionVar = htmlQuestion;
+    }
+    return generateBlankCard(), showQuestion(number), onclickDistribution()
+}
+
+function onclickDistribution() {
+    let option = document.getElementsByClassName('option');
+    for (let i = 0; i < option.length; i++) {
+        option[i].parentNode.setAttribute('onclick', `choice("answer${i + 1}")`)
+    }
+}
+
+
+function startScreen() {
+    let body = document.getElementById('body-replacement');
+    body.innerHTML = /*html*/`<div id="background">
+    <img onclick="generateQuestionCard('jsCard')" class="category" id="js" src="style/img/jsWhite.png">
+    <img onclick="generateQuestionCard('cssCard')" class="category" id="css" src="style/img/cssImg.png">
+    <img onclick="generateQuestionCard('htmlCard')" class="category" id="html" src="style/img/htmlImg.png">
+  </div>`
 }
