@@ -20,6 +20,17 @@
      object-fit: cover;
 }
 
+.progress {
+  position: relative;
+}
+
+#percent {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-weight: 700;
+}
+
 .category {
   position: absolute;
   top: 40%;

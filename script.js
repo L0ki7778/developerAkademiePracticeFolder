@@ -95,6 +95,7 @@ function choice(id) {
     };
     choice.style.color = "white";
     changeCss();
+    increaseProgress()
 }
 
 function mEnter() {
@@ -133,7 +134,10 @@ function generateQuestionCard(topic) {
     } else if (topic === 'htmlCard') {
         questionVar = htmlQuestion;
     }
-    return generateBlankCard(), showQuestion(number), onclickDistribution()
+    return generateBlankCard(),
+        showQuestion(number),
+        onclickDistribution(),
+        barColor()
 }
 
 function onclickDistribution() {
@@ -151,4 +155,29 @@ function startScreen() {
     <img onclick="generateQuestionCard('cssCard')" class="category" id="css" src="style/img/cssImg.png">
     <img onclick="generateQuestionCard('htmlCard')" class="category" id="html" src="style/img/htmlImg.png">
   </div>`
+}
+
+function increaseProgress() {
+    let counter = currentQuestion + 1;
+    let percent = counter / questionVar.length;
+    let bar = document.getElementById("progress-bar");
+    let text = document.getElementById('percent');
+    percent = percent * 100
+    bar.style = `width: ${percent}%`
+    text.innerHTML = `${percent.toFixed(0)} %`
+    if (percent >= 50) {
+        if (questionVar !== jsQuestion) {
+            text.style.color = "white"
+        }
+    }
+}
+
+
+function barColor() {
+    let bar = document.getElementById("progress-bar");
+    if (questionVar == jsQuestion) {
+        bar.classList.add('bg-warning')
+    } else if (questionVar == htmlQuestion) {
+        bar.classList.add('bg-danger')
+    }
 }

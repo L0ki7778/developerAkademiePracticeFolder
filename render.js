@@ -7,6 +7,11 @@ function generateBlankCard() {
         <div class="card-container">
             <div id ="card-container"class="card" style="width: 18rem;">
                 <img class="card-img-top" src="style/img/maze-1560761_640.png" alt="Card image cap">
+                <div class="progress">
+                  <div id="percent">0%</div>
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                  id="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
                 <div class="card-body">
                   <div class="card-head" id="question">Frage</div>
                     <div class="card">
