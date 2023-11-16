@@ -144,19 +144,22 @@ function changeCss() {
 
 //configurates all functions for the specific topic
 function generateQuestionCard(topic) {
+    counter=0;
+    currentQuestion=0;
     let number = currentQuestion;
-    if (topic === 'jsCard') {
+    if (topic === 'js') {
         questionVar = jsQuestion;
-    } else if (topic === 'cssCard') {
+    } else if (topic === 'css') {
         questionVar = cssQuestion;
-    } else if (topic === 'htmlCard') {
+    } else if (topic === 'html') {
         questionVar = htmlQuestion;
     }
     return generateBlankCard(),
         showQuestion(number),
         onclickDistribution(),
         barColor(),
-        matchBg()
+        matchBg(),
+        mobileWidth()
 }
 
 
@@ -172,10 +175,11 @@ function onclickDistribution() {
 // the startscrenn ( o_o)
 function startScreen() {
     let body = document.getElementById('body-replacement');
+    body.style.zIndex="auto"
     body.innerHTML = /*html*/`<div id="background">
-    <img onclick="generateQuestionCard('jsCard')" class="category" id="js" src="style/img/jsImg.png">
-    <img onclick="generateQuestionCard('cssCard')" class="category" id="css" src="style/img/cssImg.png">
-    <img onclick="generateQuestionCard('htmlCard')" class="category" id="html" src="style/img/htmlImg.png">
+    <img onclick="generateQuestionCard('js')" class="category" id="js" src="style/img/jsImg.png">
+    <img onclick="generateQuestionCard('css')" class="category" id="css" src="style/img/cssImg.png">
+    <img onclick="generateQuestionCard('html')" class="category" id="html" src="style/img/htmlImg.png">
   </div>`
 }
 
@@ -229,12 +233,17 @@ function winScreen(imgName){
         <div class="card" style="width: 18rem;">
             <img id="win-img" class="${imgName}-win" src="style/img/${imgName}.png" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">Geschafft!!</h5>
-                <p class="card-text">Du hast <span><b>${counter}</b></span> von <span><b>${questionVar.length}</b></span> Fragen richtig beantwortet!</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title win-text">Geschafft!!</h5>
+                <p class="card-text win-text">Du hast <span><b>${counter}</b></span> von <span><b>${questionVar.length}</b></span> Fragen richtig beantwortet!</p>
+               <div id="btn-container">
+                    <button onclick="init()" class="btn btn-secondary">Startseite</button>
+                    <button id="restart" onclick="generateQuestionCard('${imgName}')" class="btn btn-secondary">Neustart</button>
+               </div>
             </div>
         </div>
-        <img src="style/img/trophyR.png" alt=""><img src="style/img/trophyL.png" alt="">
+        <img class="trophy" id="trophy-right" src="style/img/trophyR.png" alt="trophy">
+        <img class="trophy" id="trophy-left" src="style/img/trophyL.png" alt="trophy">
+        <img id="trophy" src="style/img/trophy.png" alt="trophy">
     `;
     winBg()
 }
@@ -245,4 +254,12 @@ function winBg(){
     body.classList.remove('css-background');
     body.classList.remove('js-background');
     body.classList.add('winscreen-body')
+}
+
+function mobileWidth(){
+    let screenWidth = window.innerWidth;
+    let body = document.getElementById(`body-replacement`);
+    if(screenWidth<474){
+        body.style.zIndex="5";
+    }
 }

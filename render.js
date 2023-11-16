@@ -4,7 +4,7 @@ function init() {
 
 function generateBlankCard() {
   return document.getElementById('body-replacement').innerHTML =/*html*/`
-        <div class="card-container">
+        <div id="main-card-container" class="card-container">
             <div id ="card-container"class="card" style="width: 18rem;">
                 <img class="card-img-top" src="style/img/maze-1560761_640.png" alt="Card image cap">
                 <div class="progress">
