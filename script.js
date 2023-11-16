@@ -68,6 +68,7 @@ function nextQuestion() {
         }
     }
     if (currentQuestion !== questionVar.length) {
+        lastQuestionBtn();
         refresh();
         return showQuestion(number, questionVar)
     }
@@ -224,30 +225,8 @@ function matchBg() {
     }
 }
 
-function winScreen(imgName){
-    let body=document.getElementById(`body-replacement`);
-    body.innerHTML=/*html*/`
-        <div class="firework"></div>
-        <div class="firework"></div>
-        <div class="firework"></div>
-        <div class="card" style="width: 18rem;">
-            <img id="win-img" class="${imgName}-win" src="style/img/${imgName}.png" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title win-text">Geschafft!!</h5>
-                <p class="card-text win-text">Du hast <span><b>${counter}</b></span> von <span><b>${questionVar.length}</b></span> Fragen richtig beantwortet!</p>
-               <div id="btn-container">
-                    <button onclick="init()" class="btn btn-secondary">Startseite</button>
-                    <button id="restart" onclick="generateQuestionCard('${imgName}')" class="btn btn-secondary">Neustart</button>
-               </div>
-            </div>
-        </div>
-        <img class="trophy" id="trophy-right" src="style/img/trophyR.png" alt="trophy">
-        <img class="trophy" id="trophy-left" src="style/img/trophyL.png" alt="trophy">
-        <img id="trophy" src="style/img/trophy.png" alt="trophy">
-    `;
-    winBg()
-}
 
+//preparing the fireworks
 function winBg(){
     let body = document.getElementById(`body-replacement`);
     body.classList.remove('html-background');
@@ -256,10 +235,20 @@ function winBg(){
     body.classList.add('winscreen-body')
 }
 
+
+//hides the navbar for better mobile-experience
 function mobileWidth(){
     let screenWidth = window.innerWidth;
     let body = document.getElementById(`body-replacement`);
     if(screenWidth<474){
         body.style.zIndex="5";
+    }
+}
+
+
+function lastQuestionBtn(){
+    let btn = document.getElementById(`next`)
+    if(currentQuestion===9){
+        btn.innerText="Auswertung"
     }
 }
