@@ -48,5 +48,7 @@ function generateBlankCard() {
               </div>
         </div>
     `
-}
+};
+
+
 

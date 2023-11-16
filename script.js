@@ -8,6 +8,8 @@ let topicJs;
 let jsQuestion;
 let topicPoke;
 let poliQuestion;
+let currentQuestion = 0;
+let counter=0;
 
 fetch('quiz.json')
     .then(response => {
@@ -28,7 +30,6 @@ fetch('quiz.json')
         topicPoke = questions[3];
         poliQuestion = topicPoke.fragen;
     })
-let currentQuestion = 0;
 
 
 //render question; initate further actions
@@ -57,8 +58,19 @@ function answers() {
 //next question; restoring css properties
 function nextQuestion() {
     currentQuestion += 1;
-    refresh();
-    return showQuestion(number, questionVar)
+    if(currentQuestion == questionVar.length){
+        if(questionVar==cssQuestion){
+            return winScreen('css')
+        }else if(questionVar==htmlQuestion){
+            return winScreen('html')
+        }else if(questionVar==jsQuestion){
+            return winScreen('js')
+        }
+    }
+    if (currentQuestion !== questionVar.length) {
+        refresh();
+        return showQuestion(number, questionVar)
+    }
 }
 
 
@@ -77,6 +89,7 @@ function refresh() {
     button.disabled = true
 }
 
+
 // actual question and amount of questions
 function questionNumbers() {
     let number = document.getElementById('question-number');
@@ -92,12 +105,16 @@ function choice(id) {
     let number = currentQuestion;
     if (choice.innerText !== questionVar[number].richtige_antwort) {
         choice.parentNode.classList.add('bg-danger')
+    }else{
+        counter+=1
     };
     choice.style.color = "white";
     changeCss();
     increaseProgress()
 }
 
+
+//events for "js"-hover
 function mEnter() {
     this.style.backgroundColor = "rgba(0,0,0,0.1)"
 }
@@ -125,6 +142,7 @@ function changeCss() {
 }
 
 
+//configurates all functions for the specific topic
 function generateQuestionCard(topic) {
     let number = currentQuestion;
     if (topic === 'jsCard') {
@@ -141,6 +159,8 @@ function generateQuestionCard(topic) {
         matchBg()
 }
 
+
+//add onclick-function for specific id´s
 function onclickDistribution() {
     let option = document.getElementsByClassName('option');
     for (let i = 0; i < option.length; i++) {
@@ -149,15 +169,18 @@ function onclickDistribution() {
 }
 
 
+// the startscrenn ( o_o)
 function startScreen() {
     let body = document.getElementById('body-replacement');
     body.innerHTML = /*html*/`<div id="background">
-    <img onclick="generateQuestionCard('jsCard')" class="category" id="js" src="style/img/jsWhite.png">
+    <img onclick="generateQuestionCard('jsCard')" class="category" id="js" src="style/img/jsImg.png">
     <img onclick="generateQuestionCard('cssCard')" class="category" id="css" src="style/img/cssImg.png">
     <img onclick="generateQuestionCard('htmlCard')" class="category" id="html" src="style/img/htmlImg.png">
   </div>`
 }
 
+
+//behavior of progress-bar
 function increaseProgress() {
     let counter = currentQuestion + 1;
     let percent = counter / questionVar.length;
@@ -174,6 +197,7 @@ function increaseProgress() {
 }
 
 
+//changes bar-color for each topic
 function barColor() {
     let bar = document.getElementById("progress-bar");
     if (questionVar == jsQuestion) {
@@ -183,13 +207,42 @@ function barColor() {
     }
 };
 
-function matchBg(){
+
+//changes background for each topic
+function matchBg() {
     let body = document.getElementById('body-replacement')
-    if(questionVar==htmlQuestion){
+    if (questionVar == htmlQuestion) {
         body.classList.add('html-background')
-    }else if(questionVar==cssQuestion){
+    } else if (questionVar == cssQuestion) {
         body.classList.add('css-background')
-    }else if(questionVar==jsQuestion){
+    } else if (questionVar == jsQuestion) {
         body.classList.add('js-background')
-    } 
+    }
+}
+
+function winScreen(imgName){
+    let body=document.getElementById(`body-replacement`);
+    body.innerHTML=/*html*/`
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="card" style="width: 18rem;">
+            <img id="win-img" class="${imgName}-win" src="style/img/${imgName}.png" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Geschafft!!</h5>
+                <p class="card-text">Du hast <span><b>${counter}</b></span> von <span><b>${questionVar.length}</b></span> Fragen richtig beantwortet!</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <img src="style/img/trophyR.png" alt=""><img src="style/img/trophyL.png" alt="">
+    `;
+    winBg()
+}
+
+function winBg(){
+    let body = document.getElementById(`body-replacement`);
+    body.classList.remove('html-background');
+    body.classList.remove('css-background');
+    body.classList.remove('js-background');
+    body.classList.add('winscreen-body')
 }
