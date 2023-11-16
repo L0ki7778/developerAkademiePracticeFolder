@@ -13,6 +13,18 @@
   background-image: linear-gradient(90deg, rgba(229, 76, 38, 0.5529411765), rgba(241, 100, 40, 0.5411764706), rgba(11, 115, 184, 0.5176470588), rgba(46, 169, 222, 0.5411764706), rgba(218, 186, 44, 0.5294117647), rgba(255, 216, 58, 0.5411764706));
 }
 
+.html-background {
+  background-image: linear-gradient(90deg, rgba(241, 100, 40, 0.7725490196), rgba(229, 76, 38, 0.7725490196), rgba(241, 100, 40, 0.7725490196)) !important;
+}
+
+.css-background {
+  background-image: linear-gradient(90deg, rgba(46, 169, 222, 0.7058823529), rgba(11, 115, 184, 0.7450980392), rgba(46, 169, 222, 0.7058823529)) !important;
+}
+
+.js-background {
+  background-image: linear-gradient(90deg, rgba(255, 216, 58, 0.7607843137), rgba(218, 186, 44, 0.7529411765), rgba(255, 216, 58, 0.7607843137)) !important;
+}
+
 #bg-img {
   width: 100%;
   height: 100%;
@@ -38,7 +50,19 @@
   height: 150px;
   width: 150px;
 }
+.category:hover {
+  animation: shadow 0.2s ease-in-out forwards;
+  cursor: pointer;
+}
 
+@keyframes shadow {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0px 11px 8px -7px rgba(0, 0, 0, 0.2);
+  }
+}
 #js {
   right: 5%;
 }

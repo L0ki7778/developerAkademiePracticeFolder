@@ -137,7 +137,8 @@ function generateQuestionCard(topic) {
     return generateBlankCard(),
         showQuestion(number),
         onclickDistribution(),
-        barColor()
+        barColor(),
+        matchBg()
 }
 
 function onclickDistribution() {
@@ -180,4 +181,15 @@ function barColor() {
     } else if (questionVar == htmlQuestion) {
         bar.classList.add('bg-danger')
     }
+};
+
+function matchBg(){
+    let body = document.getElementById('body-replacement')
+    if(questionVar==htmlQuestion){
+        body.classList.add('html-background')
+    }else if(questionVar==cssQuestion){
+        body.classList.add('css-background')
+    }else if(questionVar==jsQuestion){
+        body.classList.add('js-background')
+    } 
 }
