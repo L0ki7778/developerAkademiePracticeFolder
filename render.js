@@ -62,9 +62,12 @@ function winScreen(imgName){
           <div  class="card-body">
               <h5 class="card-title win-text">Geschafft!!</h5>
               <p class="card-text win-text">Du hast <span><b>${counter}</b></span> von <span><b>${questionVar.length}</b></span> Fragen richtig beantwortet!</p>
-             <div id="btn-container">
-                  <button onclick="init()" class="btn btn-secondary">Startseite</button>
-                  <button id="restart" onclick="generateQuestionCard('${imgName}')" class="btn btn-secondary">Neustart</button>
+             <div id="lower-container">
+              <img id="winscreen-trophy" src="style/img/trophy.png" alt="trophy">
+                <div id="btn-container">
+                    <button onclick="init()" class="btn btn-secondary">Startseite</button>
+                    <button id="restart" onclick="generateQuestionCard('${imgName}')" class="btn btn-secondary">Neustart</button>
+               </div>
              </div>
           </div>
       </div>

@@ -157,6 +157,7 @@
   padding-top: 1rem;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .win-text {
@@ -176,6 +177,15 @@
   position: fixed;
   bottom: -125px;
   visibility: hidden;
+}
+
+#lower-container {
+  display: none;
+}
+
+#winscreen-tophy {
+  margin: auto;
+  height: 300px;
 }
 
 @keyframes firework {
@@ -302,6 +312,9 @@
     width: 30rem !important;
     height: 40rem;
   }
+  #lower-container {
+    display: flex;
+  }
   .card-body {
     justify-content: flex-end;
   }
@@ -309,6 +322,11 @@
     position: absolute;
     bottom: 20px;
     width: 93%;
+  }
+}
+@media (max-width: 1400px) {
+  #winscreen-trophy {
+    display: none;
   }
 }
 @media (min-width: 900px) {
