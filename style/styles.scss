@@ -362,6 +362,24 @@
     }
 }
 
+@media(min-width:1400px){
+    #win-card-body{
+        width: 30rem!important;
+        height: 40rem;
+    }
+
+    .card-body{
+        justify-content: flex-end;
+    }
+
+    #btn-container{
+        position: absolute;
+        bottom: 20px;
+        width: 93%;
+    }
+    
+}
+
 @media(min-width:900px){
     #js.category{
         right: 5%;

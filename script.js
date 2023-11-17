@@ -9,7 +9,11 @@ let jsQuestion;
 let topicPoke;
 let poliQuestion;
 let currentQuestion = 0;
-let counter=0;
+let counter = 0;
+const AUDIO_CORRECT = new Audio('audio/correct.mp3');
+const AUDIO_WRONG = new Audio('audio/wrong.mp3');
+const AUDIO_FINISH = new Audio('audio/highlightingResult.mp3')
+
 
 fetch('quiz.json')
     .then(response => {
@@ -30,6 +34,48 @@ fetch('quiz.json')
         topicPoke = questions[3];
         poliQuestion = topicPoke.fragen;
     })
+
+
+// the startscrenn ( o_o)
+function startScreen() {
+    let body = document.getElementById('body-replacement');
+    body.style.zIndex = "auto"
+    body.innerHTML = /*html*/`<div id="background">
+    <img onclick="generateQuestionCard('js')" class="category" id="js" src="style/img/jsImg.png">
+    <img onclick="generateQuestionCard('css')" class="category" id="css" src="style/img/cssImg.png">
+    <img onclick="generateQuestionCard('html')" class="category" id="html" src="style/img/htmlImg.png">
+  </div>`
+}
+
+
+//configurates all functions for the specific topic
+function generateQuestionCard(topic) {
+    counter = 0;
+    currentQuestion = 0;
+    let number = currentQuestion;
+    if (topic === 'js') {
+        questionVar = jsQuestion;
+    } else if (topic === 'css') {
+        questionVar = cssQuestion;
+    } else if (topic === 'html') {
+        questionVar = htmlQuestion;
+    }
+    return generateBlankCard(),
+        showQuestion(number),
+        onclickDistribution(),
+        barColor(),
+        matchBg(),
+        mobileWidth()
+}
+
+
+//add onclick-function for specific id´s
+function onclickDistribution() {
+    let option = document.getElementsByClassName('option');
+    for (let i = 0; i < option.length; i++) {
+        option[i].parentNode.setAttribute('onclick', `choice("answer${i + 1}")`)
+    }
+}
 
 
 //render question; initate further actions
@@ -58,12 +104,12 @@ function answers() {
 //next question; restoring css properties
 function nextQuestion() {
     currentQuestion += 1;
-    if(currentQuestion == questionVar.length){
-        if(questionVar==cssQuestion){
+    if (currentQuestion == questionVar.length) {
+        if (questionVar == cssQuestion) {
             return winScreen('css')
-        }else if(questionVar==htmlQuestion){
+        } else if (questionVar == htmlQuestion) {
             return winScreen('html')
-        }else if(questionVar==jsQuestion){
+        } else if (questionVar == jsQuestion) {
             return winScreen('js')
         }
     }
@@ -105,9 +151,11 @@ function choice(id) {
     let choice = document.getElementById(`${id}`);
     let number = currentQuestion;
     if (choice.innerText !== questionVar[number].richtige_antwort) {
-        choice.parentNode.classList.add('bg-danger')
-    }else{
-        counter+=1
+        choice.parentNode.classList.add('bg-danger');
+        AUDIO_WRONG.play();
+    } else {
+        counter += 1;
+        AUDIO_CORRECT.play()
     };
     choice.style.color = "white";
     changeCss();
@@ -140,48 +188,6 @@ function changeCss() {
         }
     };
     button.disabled = false;
-}
-
-
-//configurates all functions for the specific topic
-function generateQuestionCard(topic) {
-    counter=0;
-    currentQuestion=0;
-    let number = currentQuestion;
-    if (topic === 'js') {
-        questionVar = jsQuestion;
-    } else if (topic === 'css') {
-        questionVar = cssQuestion;
-    } else if (topic === 'html') {
-        questionVar = htmlQuestion;
-    }
-    return generateBlankCard(),
-        showQuestion(number),
-        onclickDistribution(),
-        barColor(),
-        matchBg(),
-        mobileWidth()
-}
-
-
-//add onclick-function for specific id´s
-function onclickDistribution() {
-    let option = document.getElementsByClassName('option');
-    for (let i = 0; i < option.length; i++) {
-        option[i].parentNode.setAttribute('onclick', `choice("answer${i + 1}")`)
-    }
-}
-
-
-// the startscrenn ( o_o)
-function startScreen() {
-    let body = document.getElementById('body-replacement');
-    body.style.zIndex="auto"
-    body.innerHTML = /*html*/`<div id="background">
-    <img onclick="generateQuestionCard('js')" class="category" id="js" src="style/img/jsImg.png">
-    <img onclick="generateQuestionCard('css')" class="category" id="css" src="style/img/cssImg.png">
-    <img onclick="generateQuestionCard('html')" class="category" id="html" src="style/img/htmlImg.png">
-  </div>`
 }
 
 
@@ -227,28 +233,29 @@ function matchBg() {
 
 
 //preparing the fireworks
-function winBg(){
+function winBg() {
     let body = document.getElementById(`body-replacement`);
     body.classList.remove('html-background');
     body.classList.remove('css-background');
     body.classList.remove('js-background');
-    body.classList.add('winscreen-body')
+    body.classList.add('winscreen-body');
+    AUDIO_FINISH.play()
 }
 
 
 //hides the navbar for better mobile-experience
-function mobileWidth(){
+function mobileWidth() {
     let screenWidth = window.innerWidth;
     let body = document.getElementById(`body-replacement`);
-    if(screenWidth<474){
-        body.style.zIndex="5";
+    if (screenWidth < 474) {
+        body.style.zIndex = "5";
     }
 }
 
 
-function lastQuestionBtn(){
+function lastQuestionBtn() {
     let btn = document.getElementById(`next`)
-    if(currentQuestion===9){
-        btn.innerText="Auswertung"
+    if (currentQuestion === 9) {
+        btn.innerText = "Auswertung"
     }
 }

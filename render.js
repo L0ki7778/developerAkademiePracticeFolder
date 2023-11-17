@@ -57,9 +57,9 @@ function winScreen(imgName){
       <div class="firework"></div>
       <div class="firework"></div>
       <div class="firework"></div>
-      <div class="card" style="width: 18rem;">
+      <div id="win-card-body" class="card" style="width: 18rem;">
           <img id="win-img" class="${imgName}-win" src="style/img/${imgName}.png" class="card-img-top">
-          <div class="card-body">
+          <div  class="card-body">
               <h5 class="card-title win-text">Geschafft!!</h5>
               <p class="card-text win-text">Du hast <span><b>${counter}</b></span> von <span><b>${questionVar.length}</b></span> Fragen richtig beantwortet!</p>
              <div id="btn-container">
